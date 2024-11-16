@@ -154,24 +154,24 @@ fun SettingScreen(
             }
         )
 
-        AppInformationItem(
-            icon = R.drawable.star_24,
-            title = stringResource(R.string.rate_this_app),
-            subtitle = stringResource(R.string.rate_app_on_play_store),
-            onClick = {
-                context.startActivity(
-                    Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse(
-                            context.getString(
-                                R.string.play_store_app_link,
-                                context.packageName
-                            )
-                        )
-                    )
-                )
-            }
-        )
+//        AppInformationItem(
+//            icon = R.drawable.star_24,
+//            title = stringResource(R.string.rate_this_app),
+//            subtitle = stringResource(R.string.rate_app_on_play_store),
+//            onClick = {
+//                context.startActivity(
+//                    Intent(
+//                        Intent.ACTION_VIEW,
+//                        Uri.parse(
+//                            context.getString(
+//                                R.string.play_store_app_link,
+//                                context.packageName
+//                            )
+//                        )
+//                    )
+//                )
+//            }
+//        )
 
         AppInformationItem(
             icon = R.drawable.rounded_lock_24,

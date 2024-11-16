@@ -60,7 +60,7 @@
     <string name="share_app_and_make_their_life_easy">Share app and make their life easy</string>
     <string name="rate_this_app">Rate this App</string>
     <string name="rate_app_on_play_store">Rate app on play store</string>
-    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_policy">About Us</string>
     <string name="read_this_app_s_privacy_policy">Read this app\'s privacy policy</string>
     <string name="version_number">Version Number</string>
     <string name="current_theme">Current Theme</string>
@@ -78,5 +78,5 @@
     <string name="share_app_text">Just scanned the perfect document with PSTU Document Scanner! Try
         it out, Download now!\nhttps://play.google.com/store/apps/details?id=%1$s</string>
     <string name="play_store_app_link">https://play.google.com/store/apps/details?id=%1$s</string>
-    <string name="privacy_policy_link">https://sites.google.com/view/pro-scanner-app-privacy/</string>
+    <string name="privacy_policy_link">https://pstuscanner.vercel.app/</string>
 </resources>
