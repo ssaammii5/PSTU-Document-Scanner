@@ -5,7 +5,7 @@ class Constants {
         const val ALL = "All"
         const val DATA = "AppPrefs"
         const val THEME_NAME = "themeName"
-        const val PRO_SCANNER = "PSTU Document Scanner"
+        const val PSTU_DOC = "PSTU Document Scanner"
         const val SELECTED_FILES = "SelectedFile"
         const val SELECTED_FILE_NAME = "SelectedFileName"
         const val IS_ONBOARDED = "isOnboarded"

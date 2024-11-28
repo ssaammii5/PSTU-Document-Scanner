@@ -87,6 +87,10 @@ dependencies {
     implementation ("org.apache.poi:poi-ooxml:5.2.3")
     implementation ("org.apache.xmlbeans:xmlbeans:5.1.1")
 
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.10.0")
+
     // loading images efficiently
     implementation(libs.coil.compose)
 

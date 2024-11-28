@@ -46,6 +46,8 @@
     <string name="save_to_storage_icon">Save to storage icon</string>
     <string name="save_to_storage">Save to storage</string>
     <string name="save_image_icon">Save image icon</string>
+    <string name="convert_to_word_icon">Convert to Word Icon</string>
+    <string name="convert_to_word">Convert to Word</string>
     <string name="save_as_images">Save as images</string>
     <string name="duplicate_icon">Duplicate icon</string>
     <string name="duplicate">Duplicate</string>

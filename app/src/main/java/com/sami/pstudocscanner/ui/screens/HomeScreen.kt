@@ -60,6 +60,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -82,6 +83,7 @@ import com.sami.pstudocscanner.ui.component.SwipeToDeleteContainer
 import com.sami.pstudocscanner.util.Constants.Companion.ALL
 import com.sami.pstudocscanner.util.Constants.Companion.SELECTED_FILES
 import com.sami.pstudocscanner.util.Constants.Companion.SELECTED_FILE_NAME
+import com.sami.pstudocscanner.util.convertToWord
 import com.sami.pstudocscanner.util.formatFileSize
 import com.sami.pstudocscanner.util.pdfToBitmap
 import com.sami.pstudocscanner.util.shareSelectedFiles
@@ -440,6 +442,9 @@ fun HomeScreen(
                                 askFileSaveLocation = {
                                     askFileSaveLocation(item.first)
                                 },
+                                convertToWord = { uri ->
+                                    convertToWord(uri, context)
+                                },
 //                                saveFileAsImages = {saveFileAsImages(item)}
                             )
                         },
@@ -467,7 +472,8 @@ fun ItemPdf(
     duplicateFile: () -> Unit,
     shareFile: () -> Unit,
     deleteFile: () -> Unit,
-    askFileSaveLocation: () -> Unit
+    askFileSaveLocation: () -> Unit,
+    convertToWord: (Uri) -> Unit
 ) {
     var isExpanded by remember { mutableStateOf(false) }
     val density = LocalDensity.current
@@ -475,6 +481,8 @@ fun ItemPdf(
 
     val file = uri.toFile()
     val image = pdfToBitmap(file)
+
+    val context = LocalContext.current
 
     DropdownMenu(
         expanded = isExpanded,
@@ -554,6 +562,16 @@ fun ItemPdf(
                 R.drawable.delete_24,
                 stringResource(R.string.delete_icon),
                 stringResource(R.string.delete_word)
+            )
+        })
+        DropdownMenuItem(onClick = {
+            isExpanded = false
+            convertToWord(uri, context)
+        }, text = {
+            DropDownItemNameAndIcon(
+                R.drawable.word_24, // Replace with your drawable for a Word icon
+                stringResource(R.string.convert_to_word_icon),
+                stringResource(R.string.convert_to_word)
             )
         })
     }

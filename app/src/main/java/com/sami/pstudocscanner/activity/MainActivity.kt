@@ -76,6 +76,7 @@ import com.sami.pstudocscanner.util.saveFileToSelectedLocation
 import com.sami.pstudocscanner.util.scanDoc
 import com.sami.pstudocscanner.viewModel.MainViewModel
 import com.google.mlkit.vision.documentscanner.GmsDocumentScanningResult
+import com.sami.pstudocscanner.ui.screens.OOCRScreen
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
@@ -254,6 +255,7 @@ class MainActivity : ComponentActivity() {
                                 originalFile = originalUri
                                 saveFileToSelectedLocLauncher.launch(intent)
                             },
+
 //                            saveFileAsImages = { }
                         )
                     }
@@ -293,6 +295,7 @@ class MainActivity : ComponentActivity() {
                     // Add the OCRScanningScreen route
                     composable("ocr_scanning") {
                         OCRScanningScreen()
+                        //OOCRScreen()
                     }
                 }
             }
@@ -348,7 +351,7 @@ class MainActivity : ComponentActivity() {
                     }
                 }
                 Button(
-                     onClick = {
+                    onClick = {
                         navController.navigate("ocr_scanning")
                     },
                     shape = RoundedCornerShape(8.dp),

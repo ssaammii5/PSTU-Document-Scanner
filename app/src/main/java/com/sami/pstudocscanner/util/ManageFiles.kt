@@ -12,7 +12,7 @@ import androidx.core.content.FileProvider
 import androidx.core.net.toUri
 import androidx.documentfile.provider.DocumentFile
 import com.sami.pstudocscanner.R
-import com.sami.pstudocscanner.util.Constants.Companion.PRO_SCANNER
+import com.sami.pstudocscanner.util.Constants.Companion.PSTU_DOC
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
@@ -22,7 +22,7 @@ import java.io.IOException
 import java.util.Locale
 
 fun checkAndCreateInternalParentDir(context: Activity): File {
-    val dirPath: String = context.filesDir.absolutePath + File.separator + PRO_SCANNER
+    val dirPath: String = context.filesDir.absolutePath + File.separator + PSTU_DOC
     val projDir = File(dirPath)
     if (!projDir.exists())
         projDir.mkdirs()
