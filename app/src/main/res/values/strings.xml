@@ -61,7 +61,7 @@
     <string name="rate_this_app">Rate this App</string>
     <string name="rate_app_on_play_store">Rate app on play store</string>
     <string name="privacy_policy">About Us</string>
-    <string name="read_this_app_s_privacy_policy">Read this app\'s privacy policy</string>
+    <string name="read_this_app_s_privacy_policy">Read this app\'s detailed information.</string>
     <string name="version_number">Version Number</string>
     <string name="current_theme">Current Theme</string>
     <string name="category_already_exists">Category already exists</string>
